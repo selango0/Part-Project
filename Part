@@ -1,0 +1,115 @@
+package cmsy199_elango;
+/**
+ * This class is an object that has 4 values in it:
+ * name - A textual name
+ * number - an alphanumeric sequence that may contain hyphens
+ * ncage - A five character alphanumeric code for a business of the form NNNNN
+ * niin - a 13 digit code of the form XXXX-XX-XXX-XXXX
+ * 
+ * @version 0.3
+ */
+
+public class Part {
+	
+	//member of the class
+	private String Name, Number, nCage, nIin;
+
+
+	//default constructor
+	public Part(String Name, String Number, String nCage, String nIin)
+	{
+		this.Name = Name;
+		this.Number = Number;
+		this.nCage = nCage;
+		this.nIin = nIin;
+	}
+	
+	//assuming all parameters but nIin is given, default is called
+	public Part(String Name, String Number, String nCage)
+	{
+		this(Name, Number, nCage, null);
+	}
+	//assuming all parameters but nIin and nCage is given, default is called
+	public Part(String Name, String Number)
+	{
+		this(Name, Number, null, null);
+	}
+	
+	//assuming only name is given, default is called
+	public Part(String Name)
+	{
+		this(Name, null, null, null);
+	}
+	//assuming NO parameters is given, default is called
+	public Part()
+	{
+		this(null, null, null, null);
+	}
+
+	//formatting toString method
+@Override
+	public String toString()
+	{
+		
+		return String.format("PART:%s,PIN:%s,NCAGE:%s,NIIN:%s", Name, Number, nCage, nIin);
+		
+	}
+//compares two objects of parts. two parts are only equal if they have the same number
+//ncage and niin
+public boolean equals(Part part)
+	{
+		super.equals(part); 
+		if ((this.Number.equals(part.Number)) && (this.nCage.equals(part.nCage)) &&  (this.nIin.equals(part.nIin)))
+				{
+					return true;
+				}
+		else
+			return false;
+				
+	}
+	//Accessor(getter) functions */ 
+
+	//gets name
+	public String getName()
+	{
+		return Name;
+	}
+	//gets number
+	public String getNumber()
+	{
+		return Number;
+	}
+	//gets five character alphanumeric code
+	public String getnCage()
+	{
+		return nCage;
+	}
+	//gets a 13 digit code 
+	public String getnIin()
+	{
+		return nIin;
+	}
+	//Mutator(setter functions)
+	//method to set name
+	public void setName(String nameStr)
+	{
+		this.Name = nameStr;
+	}
+	//method to set Number
+	public void setNumber(String num)
+	{
+		this.Number = num; 
+	}
+	//method to set cage
+	public void setnCage(String cage)
+	{
+		this.nCage = cage;
+	}
+	//method to set niin
+	public void setnIin(String niin)
+	{
+		this.nIin = niin;
+	}
+
+	
+}
