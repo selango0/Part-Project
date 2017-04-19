@@ -3,28 +3,65 @@ package cmsy199_elango;
 /**
  *This test class does basic testing on the Part object
  *It calls the constructors and prints out members with accessors
- * @author 
- * @version 0.2
+ * @author Shalmika Elango
+ * @version 0.4
  */
 public class Part1Test {
 	public static void main(String args[])
 	{
-		//create an object to Part class by passing initial values to constructor
-		Part partObj = new Part("Pen", "0B23F345", "AFT06", "1234-56-789-1234");
-		Part partObj2 = new Part("Eraser", "0B23F345","AFT06", "1234-56-789-1234");
-		//compares partObj2 and parobj 
-		System.out.println(partObj2.equals(partObj));
-		
-		//print the PartObj using toString() method
-		System.out.println("Initial values using constructor: \n" + partObj.toString());
-		
-		//set values using setter func;tions
-		partObj.setName("Eraser");
-		partObj.setNumber("0DU1234");
-		partObj.setnIin("9084-12-753-6789");
-		
-		//print the partObj using toString() method
-		System.out.println("\nValues after using set functions: \n" + partObj.toString());
+		   //create an object to Part class by passing initial values to constructor
+
+	       Part partObj = new Part("Pen", "0B23F345", "AFT06", "1234-56-789-1234");
+
+	       Part partObj2 = new Part("Eraser", "0B23F345","AFT06", "1234-56-789-1234");
+
+	       //compares partObj2 and parobj
+
+	       System.out.println(partObj2.equals(partObj));
+
+	      
+
+	       //print the PartObj using toString() method
+
+	       System.out.println("Initial values using constructor: \n" + partObj.toString());
+
+	      
+
+	       //set values using setter func;tions
+
+	       partObj.setName("Eraser");
+
+	       partObj.setNumber("0DU1234");
+
+	       partObj.setnIin("9084-12-753-6789");
+
+	      
+
+	       //print the partObj using toString() method
+
+	       System.out.println("\nValues after using set functions: \n" + partObj.toString());
+
+	      
+
+	       //testing expendable part
+
+	       ExpendablePart expPart = new ExpendablePart();
+
+	       expPart.setFailureRate(3);
+
+	       expPart.setLeadTime(20);
+
+	       expPart.fail();
+
+	       //testing consumable part
+
+	       ConsumablePart conPart = new ConsumablePart();
+
+	       conPart.setReplacementCost(23);
+
+	       conPart.setUsesLeft(6);
+
+	       conPart.fail();
 		
 		}
 	}
