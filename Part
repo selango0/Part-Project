@@ -5,8 +5,8 @@ package cmsy199_elango;
  * number - an alphanumeric sequence that may contain hyphens
  * ncage - A five character alphanumeric code for a business of the form NNNNN
  * niin - a 13 digit code of the form XXXX-XX-XXX-XXXX
- * 
- * @version 0.3
+ * @author Shalmika Elango
+ * @version 0.4
  */
 
 public class Part {
@@ -56,15 +56,22 @@ public class Part {
 	}
 //compares two objects of parts. two parts are only equal if they have the same number
 //ncage and niin
-public boolean equals(Part part)
-	{
-		super.equals(part); 
-		if ((this.Number.equals(part.Number)) && (this.nCage.equals(part.nCage)) &&  (this.nIin.equals(part.nIin)))
-				{
-					return true;
-				}
-		else
-			return false;
+public boolean equals(Object otherPart) {
+boolean result = false;
+
+if (otherPart instanceof Part) {
+
+   Part other = (Part)otherPart;
+
+   if (
+      this.Number.equals(other.Number) &&
+      this.nCage.equals(other.nCage) &&
+      this.nIin.equals(other.nIin)
+      )
+      result = true;
+}
+
+return ( result );
 				
 	}
 	//Accessor(getter) functions */ 
@@ -109,6 +116,11 @@ public boolean equals(Part part)
 	public void setnIin(String niin)
 	{
 		this.nIin = niin;
+	}
+
+	public void fail() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
