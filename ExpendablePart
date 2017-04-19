@@ -1,0 +1,46 @@
+package cmsy199_elango;
+
+public class ExpendablePart extends Part{
+
+	   private int failureRate; 
+
+	   private int leadTime;
+
+	      
+	   public int getFailureRate() {
+
+	       return failureRate;
+
+	   }
+
+	   public void setFailureRate(int failureRate) {
+
+	       this.failureRate = failureRate;
+
+	   }
+
+	 
+	   public int getLeadTime() {
+
+	       return leadTime;
+
+	   }
+
+
+	   public void setLeadTime(int leadTime) {
+
+	       this.leadTime = leadTime;
+
+	   }
+
+	   @Override
+
+	   public void fail() {
+
+	       System.out.println("This failure is because of expendable part.\nIt will take "
+
+	               + leadTime + " days to replace the part.");
+
+	   }
+
+	}
