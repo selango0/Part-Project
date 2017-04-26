@@ -1,11 +1,11 @@
-package cmsy199_elango;
+
 /**
  * This class is an object that has 4 values in it:
  * name - A textual name
  * number - an alphanumeric sequence that may contain hyphens
  * ncage - A five character alphanumeric code for a business of the form NNNNN
  * niin - a 13 digit code of the form XXXX-XX-XXX-XXXX
- * @author Shalmika Elango
+ * @author 
  * @version 0.4
  */
 
