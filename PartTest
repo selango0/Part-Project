@@ -1,9 +1,8 @@
-package cmsy199_elango;
 
 /**
  *This test class does basic testing on the Part object
  *It calls the constructors and prints out members with accessors
- * @author Shalmika Elango
+ * @author 
  * @version 0.4
  */
 public class Part1Test {
